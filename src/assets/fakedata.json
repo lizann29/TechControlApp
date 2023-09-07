@@ -1,0 +1,45 @@
+[
+    {
+      "carName": "Car 1",
+      "lastDate": "2023-09-01",
+      "nextDate": "2023-09-15",
+      "isInspected": "Yes",
+      "lastUpdated": "2023-09-05"
+    },
+    {
+      "carName": "Car 2",
+      "lastDate": "2023-08-25",
+      "nextDate": "2023-09-10",
+      "isInspected": "No",
+      "lastUpdated": "2023-09-03"
+    },
+    {
+      "carName": "Car 3",
+      "lastDate": "2023-08-25",
+      "nextDate": "2023-09-10",
+      "isInspected": "No",
+      "lastUpdated": "2023-09-03"
+    },
+    {
+      "carName": "Car 1",
+      "lastDate": "2023-09-01",
+      "nextDate": "2023-09-15",
+      "isInspected": "Yes",
+      "lastUpdated": "2023-09-05"
+    },
+    {
+      "carName": "Car 2",
+      "lastDate": "2023-08-25",
+      "nextDate": "2023-09-10",
+      "isInspected": "No",
+      "lastUpdated": "2023-09-03"
+    },
+    {
+      "carName": "Car 3",
+      "lastDate": "2023-08-25",
+      "nextDate": "2023-09-10",
+      "isInspected": "No",
+      "lastUpdated": "2023-09-03"
+    }
+  ]
+  

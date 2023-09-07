@@ -1,0 +1,26 @@
+<div>
+  <div class="input-div"> 
+    <input type="text" [(ngModel)]="filterText" placeholder="Search" #search class="search form-control">
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>მანქანის სახელი</th>
+        <th>განბაჟების ბოლო მონაცემი</th>
+        <th>განბაჟების მომდევნო მონაცემი</th>
+        <th>სტატუსი</th>
+        <th>განახლების თარიღი</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of carsData | search: filterText" >
+        <td>{{ car.carName }}</td>
+        <td>{{ car.lastDate }}</td>
+        <td>{{ car.nextDate }}</td>
+        <td>{{ car.isInspected }}</td>
+        <td>{{ car.lastUpdated }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

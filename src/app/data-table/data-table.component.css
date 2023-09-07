@@ -1,0 +1,31 @@
+table{
+  text-align: center;
+}
+th{
+  padding: 0.7%;
+  background-color: #2e68a1  !important;
+  color: white;
+  border-right: 1px solid rgba(225, 225, 231, 0.425);
+}
+td{
+  padding: 0.7%;
+  background-color: #2e68a1 !important;
+  border-right: 1px solid rgba(225, 225, 231, 0.425);
+  border-bottom: 1px solid rgba(225, 225, 231, 0.425);
+  color: white;
+} 
+tr:hover td{
+  background-color: rgba(233, 227, 227, 0.822) !important;
+  color: black !important;
+}
+
+.search{
+  margin: 0 auto;
+  border: 2px solid rgb(206, 201, 201);
+  background-color:rgb(255, 255, 255) ;
+  width: 40%;
+}
+.input-div{
+  padding-bottom: 2%;
+  background-color: #204971;
+}
