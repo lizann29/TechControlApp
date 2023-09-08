@@ -30,3 +30,25 @@ tr:hover td{
   background-color: #204971;
 }
 
+.maincontainer{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+/* height: 100vh; */
+}
+.pagdiv{
+  margin-left: 93%;
+  margin-bottom: 10px;
+}
+.page_info button {
+  font-size: 16px;
+  margin-right: 5px;
+  background-color: #204971; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+.page_info button:hover {
+  background-color: #0056b3;
+}
