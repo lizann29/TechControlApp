@@ -1,4 +1,8 @@
-<div>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<div class="maincontainer">
   <div class="input-div"> 
     <input type="text" [(ngModel)]="filterText" placeholder="Search" #search class="search form-control">
   </div>
@@ -14,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let car of carsData | search: filterText" >
-        <td>{{ car.carName }}</td>
+        <td>{{ car.name }}</td>
         <td>{{ car.lastDate }}</td>
         <td>{{ car.nextDate }}</td>
         <td>{{ car.isInspected }}</td>
@@ -22,5 +26,5 @@
       </tr>
     </tbody>
   </table>
-
+  
 </div>
