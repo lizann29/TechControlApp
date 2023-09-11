@@ -1,41 +1,9 @@
-
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<!-- <div class="maincontainer">
-  <div class="input-div"> 
-    <input type="text" [(ngModel)]="filterText" placeholder="Search" #search class="search form-control">
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>მანქანის სახელი</th>
-        <th>განბაჟების ბოლო მონაცემი</th>
-        <th>განბაჟების მომდევნო მონაცემი</th>
-        <th>სტატუსი</th>
-        <th>განახლების თარიღი</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of carsData.slice((pageindex - 1) * itemsPerPage, pageindex * itemsPerPage) | search: filterText">
-        <td>{{ car.name }}</td>
-        <td>{{ car.lastDate }}</td>
-        <td>{{ car.nextDate }}</td>
-        <td>{{ car.isInspected }}</td>
-        <td>{{ car.lastUpdated }}</td>
-      </tr>
-      
-    </tbody>
-  </table>
-  <div class="pagdiv">
-    <div class="pagination2" style="margin-top: 15px;">
-     <div class ="page_info">
-      <button class="btn btn-primary leftBtn" (click)="previousMainPage()"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="btn btn-primary rightBtn" (click)="nextMainPage()"><i class="fa-solid fa-chevron-right"></i></button>    
-    </div>
-   </div> 
-  </div>
-</div> -->
+
+<div class="cont">
+
 
 <div class="maincontainer">
   <div class="input-div"> 
@@ -63,15 +31,16 @@
         
       </tbody>
     </table>
+
+  </div>
+
+</div>
     <div class="pagdiv">
-      <div class="pagination2" style="margin-top: 15px;">
+      <div class="pagination2" >
         <div class="page_info">
           <button class="btn btn-primary leftBtn" (click)="previousMainPage()"><i class="fa-solid fa-chevron-left"></i></button>
           <button class="btn btn-primary rightBtn" (click)="nextMainPage()"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
-  </div>
 </div>
-
-

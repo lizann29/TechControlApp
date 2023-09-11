@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component'; 
 import { DataTableComponent } from './data-table/data-table.component';
 import 'bootstrap/dist/js/bootstrap.js';
-// import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import 'bootstrap/dist/js/bootstrap.js';
     HttpClientModule,
     FormsModule
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })
