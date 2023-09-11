@@ -5,6 +5,7 @@
 <div class="cont">
 
 
+
 <div class="maincontainer">
   <div class="input-div"> 
     <input type="text" [(ngModel)]="filterText" placeholder="Search" #search class="search form-control">
@@ -25,7 +26,11 @@
           <td>{{ car.name }}</td>
           <td>{{ car.lastDate }}</td>
           <td>{{ car.nextDate }}</td>
-          <td>{{ car.isInspected }}</td>
+          <td>
+            <span *ngIf="car.isInspected; else notInspected">განბაჟებულია</span>
+            <ng-template #notInspected>განუბაჟებელია</ng-template>
+          </td>
+          
           <td>{{ car.lastUpdated }}</td>
         </tr>
         
@@ -43,4 +48,4 @@
         </div>
       </div>
     </div>
-</div>
+</div> 

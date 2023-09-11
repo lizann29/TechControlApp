@@ -34,19 +34,22 @@ export class DataTableComponent implements OnInit {
     });
   }
 
-  getData(){
-
-     this.http.get<any[]>(`https://localhost:7028/api/Car/GetAllCars?username=${this.username}&password=${this.password}`).subscribe(
-      (data) => {
-        this.carsData = data;
-        this.totalPages = Math.ceil(data.length / this.itemsPerPage); 
-    
-        console.log(this.carsData);
-      },
-      (error) => {
-        console.error('Error loading cars', error);
-      }
-    );   
+  getData() {
+    this.http
+      .get<any[]>(`https://localhost:7028/api/Car/GetAllCars?username=${this.username}&password=${this.password}`)
+      .subscribe(
+        (data) => {
+          this.carsData = data.map((car) => ({
+            ...car,
+            isInspectedText: car.isInspected ? 'განბაჟებულია' : 'განუბაჟებელია',
+          }));
+          this.totalPages = Math.ceil(data.length / this.itemsPerPage);
+          console.log(this.carsData);
+        },
+        (error) => {
+          console.error('Error loading cars', error);
+        }
+      );
   }
  
     
