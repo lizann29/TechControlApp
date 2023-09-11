@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-data-table',
@@ -14,12 +15,28 @@ export class DataTableComponent implements OnInit {
   totalPages: any; 
   itemsPerPage: number = 15; 
   pageindex: number = 1;
+  param: any;
+  username: string = ''; 
+  password: string = ''; 
+
   
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('https://localhost:7028/api/Car/GetAllCars?username=mygpscars&password=mygpscars12345').subscribe(
+    this.activatedRoute.queryParams.subscribe((queryParams) => {
+      this.username = queryParams['username'] ;
+      this.password = queryParams['password'];
+
+      console.log('Username:', this.username);
+      console.log('Password:', this.password);
+      this.getData();
+    });
+  }
+
+  getData(){
+
+     this.http.get<any[]>(`https://localhost:7028/api/Car/GetAllCars?username=${this.username}&password=${this.password}`).subscribe(
       (data) => {
         this.carsData = data;
         this.totalPages = Math.ceil(data.length / this.itemsPerPage); 
@@ -29,10 +46,10 @@ export class DataTableComponent implements OnInit {
       (error) => {
         console.error('Error loading cars', error);
       }
-    );
-    
+    );   
   }
-
+ 
+    
   previousMainPage() {
     if (this.pageindex > 1) {
       this.pageindex--;

@@ -6,6 +6,8 @@ import { DataTableComponent } from './data-table/data-table.component';
 const routes: Routes = [
   {path: 'home', component: NavBarComponent},
   {path: 'data', component: DataTableComponent},
+  { path: 'data', component: DataTableComponent },
+  
 ];
 
 @NgModule({
