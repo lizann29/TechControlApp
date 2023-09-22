@@ -15,8 +15,8 @@
       <thead>
         <tr>
           <th>მანქანის სახელი</th>
-          <th>განბაჟების ბოლო მონაცემი</th>
-          <th>განბაჟების მომდევნო მონაცემი</th>
+          <th>ტექკონტროლის ბოლო მონაცემი</th>
+          <th>ტექკონტროლის მომდევნო მონაცემი</th>
           <th>სტატუსი</th>
           <th>განახლების თარიღი</th>
         </tr>
@@ -27,10 +27,10 @@
           <td>{{ car.lastDate }}</td>
           <td>{{ car.nextDate }}</td>
           <td>
-            <span *ngIf="car.isInspected; else notInspected">განბაჟებულია</span>
-            <ng-template #notInspected>განუბაჟებელია</ng-template>
-          </td>
-          
+  <span *ngIf="car.isInspected; else notInspected">ინსპექტირებულია</span>
+  <ng-template #notInspected>არ არის ინსპექტირებული</ng-template>
+</td>
+
           <td>{{ car.lastUpdated }}</td>
         </tr>
         
